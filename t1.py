@@ -2,6 +2,7 @@ from urllib.request import urlopen
 import json
 
 # Get the dataset
+# url could be param??
 url = 'http://whereismypower.co.za/api/list_areas.json'
 response = urlopen(url)
 
