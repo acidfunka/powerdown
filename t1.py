@@ -21,7 +21,9 @@ ide = 2
 #conn.execute("INSERT INTO run (id,value) \
 #      VALUES (1, '5' )");
 
-conn.execute('insert into run values (?,?)', (ide,json_clob))
+conn.execute('delete from run')
+
+conn.execute('insert into run values (?,?)', (3,json_clob))
 
 conn.commit()
 
