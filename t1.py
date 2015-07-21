@@ -4,7 +4,8 @@ import sqlite3
 
 # Get the dataset
 # url could be param??
-url = 'http://whereismypower.co.za/api/get_status.json'
+#url = 'http://whereismypower.co.za/api/get_status.json'
+url = 'http://122.181.128.170:8080/cap-dataservice/rest/dataservice/1/CLM/1/CustomerProfiles/json/query'
 response = urlopen(url)
 
 # Convert bytes to string type and string type to dict
@@ -30,7 +31,7 @@ conn.commit()
 cursor = conn.execute("SELECT id, value from run")
 for row in cursor:
    print ("id = ", row[0])
-   print ("value = ", row[1], "\n")
+   #print ("value = ", row[1], "\n")
    #print ("ADDRESS = ", row[2])
    #print ("SALARY = ", row[3], "\n")
 
