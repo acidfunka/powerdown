@@ -18,7 +18,7 @@ json_clob = json.dumps(json_obj, sort_keys=True, indent=4)
 stage = (json_obj['active_stage']) 
 stageName = (json_obj['active_stage_name'])
 
-
+print(json_clob)
 print (stage,stageName)
 
 
