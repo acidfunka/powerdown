@@ -29,7 +29,7 @@ else:
    print('We are currently on', stageName)
 #print(stageName)
 
-#conn = sqlite3.connect('powerDown.db')
+conn = sqlite3.connect('powerDown.db')
 #ide = 2
 
 #conn.execute("INSERT INTO run (id,value) \
@@ -41,15 +41,21 @@ else:
 
 #conn.commit()
 
-#cursor = conn.execute("SELECT Stage from wschedule")
-#for row in cursor:
-   #print ("Stage = ", row[0])
-   #print ("value = ", row[1], "\n")
+cursor = conn.execute("SELECT timeon, timeoff from wschedule where stage = 1 and Day30 like '%14%'")
+for row in cursor:
+   timeon  = (row[0])
+   timeoff  = (row[1])
+   #print ("timeon = ", row[0])
+   #print ("timeoff = ", row[1])
+   #print ("timeoff = ", row[1])
    #print ("ADDRESS = ", row[2])
    #print ("SALARY = ", row[3], "\n")
 
 
-#conn.close()
+
+conn.close()
+
+print('Loadshedding starts at', timeon, 'and will finish at', timeoff)
 
 
 ##data = json_obj
