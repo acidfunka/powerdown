@@ -5,7 +5,7 @@ import sqlite3
 # Get the dataset
 # url could be param??
 url = 'http://whereismypower.co.za/api/get_status.json'
-#url = 'http://122.181.128.170:8080/cap-dataservice/rest/dataservice/1/CLM/1/CustomerProfiles/json/query'
+
 response = urlopen(url)
 
 # Convert bytes to string type and string type to dict
